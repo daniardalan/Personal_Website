@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Danielle Damon</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="resume/resume.pdf" class="nav__link">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I'm <strong>Danielle Damon</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">CS Masters Student</p>
+            <img src="img/profile.jpg" alt="a picture of Danielle Damon" class="intro__img">
+        </section>
+        
+        
+        <!-- My Experience -->
+        <section class="my-experiences" id="experience">
+            <h2 class="section__title section__title--experiences">What I've Done</h2>
+            <div class="experiences">
+                <div class="experience">
+                    <h3>Design + Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> 
+                
+                <div class="experience">
+                    <h3>E-Commerce</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> 
+                
+                <div class="experience">
+                    <h3>WordPress</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> 
+            </div> 
+            
+            <a href="#work" class="btn">Take a Look</a>
+        </section>
+        
+        
+        <!-- About Me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">About Me</h2>
+           <p class="section__subtitle section__subtitle--about">Student and Aspiring Software Engineer</p>
+           
+           <div class="about-me__body">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+           </div>
+           
+           <img src="img/profile2.jpg" alt="Danielle leaning against a bus" class="about-me__img">
+        </section>
+        
+        <!-- My Projects -->
+        <section class="my-projects" id="projects">
+            <h2 class="section__title section__title--projects">My Projects</h2>
+            <p class="section__subtitle section__subtitle--projects">A selection of my work</p>
+    
+            <div class="portfolio">
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/CS1.jpg" alt="" class="portfolio__img">
+                    <div class="portfolio__text">
+                        <h3 class="item__title">Project 1</h3>
+                        <p class="item_body">Info about Project 1</p>
+                    </div> 
+                </a>            
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/CS2.jpg" alt="" class="portfolio__img">
+                    <div class="portfolio__text">
+                        <h3 class="item__title">Project 2</h3>
+                        <p class="item_body">Info about Project 2</p>
+                    </div> 
+                </a>   
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/CS3.jpg" alt="" class="portfolio__img">
+                    <div class="portfolio__text">
+                        <h3 class="item__title">Project 3</h3>
+                        <p class="item_body">Info about Project 3</p>
+                    </div> 
+                </a>   
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="my-skills" id="skills">
+            <h2 class="section__title section__title--skills">My Skills</h2>
+            <li class="skill">
+                <h3>Python</h3><span class="bar"><span class="python"></span></span>
+            </li>
+            <li class="skill">
+                <h3>R</h3><span class="bar"><span class="r"></span></span>
+            </li>
+            <li class="skill">
+                <h3>Git</h3><span class="bar"><span class="git"></span></span>
+            </li>
+            <li class="skill">
+                <h3>SQL</h3><span class="bar"><span class="sql"></span></span>
+            </li>
+        </section>        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:danidamon98@gmail.com" class="footer__link">danidamon98@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://linkedin.com">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        <script src="index.js"></script>
+        
+    </body>
+</html>
