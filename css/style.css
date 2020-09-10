@@ -7,20 +7,21 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Lora', serif;
-    --ff-secondary: 'Roboto Slab', serif;
+    --ff-primary: 'Playfair Display', Serif;
+    --ff-secondary: 'Source Sans Regular', Sans-Serif;
     
     --fw-reg: 400;
     --fw-bold: 700;
     
     --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #af555a;
+    --clr-dark: #252525;
+    --clr-back: #00303f;
+    --clr-accent: #dcae1d;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-body: 1.125rem;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -28,10 +29,10 @@
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 6rem;
+        --fs-h1: 4rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fs-body: 1.25rem;
     }
 }
 
@@ -78,6 +79,7 @@ strong { font-weight: var(--fw-bold) }
     font-size: .9rem;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
+    text-transform: uppercase;
     transition: transform 200ms ease-in-out;
 }
 
@@ -114,20 +116,23 @@ h3 { font-size: var(--fs-h3) }
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+    color: var(--clr-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
 
 .section__subtitle--projects {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 /* header */
@@ -140,7 +145,7 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
+    background: var(--clr-back);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -169,6 +174,7 @@ header {
     font-size: var(--fs-h2);
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 2px;
     position: relative;
 }
 
@@ -270,11 +276,13 @@ header {
     box-shadow: var(--bs);
 }
 
-.section__subtitle--intro {
-    display: inline-block;
+@media (min-width: 1300px) {
+    .intro {
+        --fs-h1: 8rem;
+    }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 800px) {
     .intro {
         display: grid;
         width: min-content;
@@ -304,10 +312,11 @@ header {
     }
 }
 
+
 /*  My Experience section  */
 
 .my-experiences {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-back);
     background-image: url(../img/services-bg.jpg);
     background-size: cover;
     /* background-blend-mode: multiply; */
@@ -355,7 +364,7 @@ header {
 /* About Me Section */
 
 .about-me {
-    max-width: 1000px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -398,7 +407,7 @@ header {
 /* My Projects */
 
 .my-projects {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-back);
     color: var(--clr-light);  
     text-align: center;
 }
@@ -421,7 +430,7 @@ header {
 }
 
 .portfolio__item {
-    background: var(--clr-dark);
+    background: var(--clr-back);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -472,6 +481,10 @@ header {
 
 /* Skills */ 
 
+.section__title--skills {
+    padding-bottom: 0.5em;
+}
+
 .my-skills {
     background: var(--clr-light);
     max-width: 1000px;
@@ -480,10 +493,15 @@ header {
 
 .skill {
     list-style: none;
+    margin: 0;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .bar {
-    background: #dfcbcb;
+    background: var(--clr-back);
     display: block;
     height: 2em;
     overflow: hidden;
@@ -551,7 +569,7 @@ header {
 /* footer */
 
 .footer {
-    background: var(--clr-dark);
+    background: var(--clr-back);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
