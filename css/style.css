@@ -15,7 +15,6 @@
     
     --clr-light: #fff;
     --clr-dark: #252525;
-    --clr-back: #00303f;
     --clr-accent: #dcae1d;
     
     --fs-h1: 3rem;
@@ -52,7 +51,7 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 3em 2em;
 }
 
 img {
@@ -65,26 +64,6 @@ strong { font-weight: var(--fw-bold) }
 :focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 5px;
-}
-
-/* Buttons */
-
-.btn {
-    display: inline-block;
-    padding: .5em 2.5em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: .9rem;
-    letter-spacing: 2px;
-    font-weight: var(--fw-bold);
-    text-transform: uppercase;
-    transition: transform 200ms ease-in-out;
-}
-
-.btn:hover {
-    transform: scale(1.1);
 }
 
 /* Typography */
@@ -129,23 +108,25 @@ h3 { font-size: var(--fs-h3) }
     margin-bottom: 1em;
 }
 
+.section__subtitle--experience,
 .section__subtitle--projects {
     color: var(--clr-accent);
-    font-weight: var(--fw-bold);
     margin-bottom: 1em;
 }
+
 
 /* header */
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1.5em;
+    background: var(--clr-light);
 }
 
 .nav {
     position: fixed;
-    background: var(--clr-back);
+    background: var(--clr-dark);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -183,7 +164,6 @@ header {
     content: "";
     width: 100%;
     height: 4px;
-    border-radius: 1em;
     background-color: var(--clr-accent);
     position: absolute;
     left: 0;
@@ -205,7 +185,6 @@ header {
 .nav__link:hover::after{
     transform: scaleX(1);
 }
-
 
 .nav-toggle {
     padding: .5em;
@@ -248,8 +227,7 @@ header {
 .hamburger::after {
     background: var(--clr-accent);
     width: 2em;
-    height: 4px;
-    border-radius: 1em;
+    height: 3px;
     transition: transform 250ms ease-in-out;
 }
 
@@ -316,37 +294,31 @@ header {
 /*  My Experience section  */
 
 .my-experiences {
-    background-color: var(--clr-back);
     background-image: url(../img/services-bg.jpg);
     background-size: cover;
     /* background-blend-mode: multiply; */
-    color: var(--clr-light);
+    color: var(--clr-dark);
     text-align: center;
 }
 
 .section__title--experiences {
-    color: var(--clr-accent);
+    color: var(--clr-dark);
     position: relative;
-}
-
-.section__title--experiences::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 2px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
 }
 
-.experiences {
-    margin-bottom: 4em;
-}
 
-.experience {
+.experience{
     max-width: 500px;
     margin: 0 auto;
+    border-top: 4px solid var(--clr-accent);
+    border-bottom: 4px solid var(--clr-accent);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    
 }
+
 
 @media (min-width: 800px) {
     .experiences {
@@ -354,6 +326,7 @@ header {
         max-width: 1500px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: auto;
     }
     
     .experience + .experience {
@@ -406,9 +379,8 @@ header {
 
 /* My Projects */
 
-.my-projects {
-    background-color: var(--clr-back);
-    color: var(--clr-light);  
+.projects {
+    color: var(--clr-dark);  
     text-align: center;
 }
 
@@ -430,7 +402,7 @@ header {
 }
 
 .portfolio__item {
-    background: var(--clr-back);
+    background: var(--clr-accent);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -447,8 +419,8 @@ header {
 }
 
 .portfolio__item::after {
-    border-top: 3px solid var(--clr-accent);
-    border-bottom: 3px solid var(--clr-accent);
+    border-top: 3px solid var(--clr-light);
+    border-bottom: 3px solid var(--clr-light);
     transform: scale(0, 1);
     transition: transform ease-out 250ms;
 }
@@ -487,8 +459,15 @@ header {
 
 .my-skills {
     background: var(--clr-light);
-    max-width: 1000px;
+    max-width: 1250px;
     margin: 0 auto;
+    text-align: center;
+    
+}
+
+.skill i {
+    color: var(--clr-accent);
+    margin-bottom: .3em;
 }
 
 .skill {
@@ -500,81 +479,21 @@ header {
     letter-spacing: 1.5px;
 }
 
-.bar {
-    background: var(--clr-back);
-    display: block;
-    height: 2em;
-    overflow: hidden;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-radius: 1em;
-}
-
-.bar span{
-    height: 2em;
-    float: left;
-    background: var(--clr-accent);
-}
-
-.python {
-    width: 100%; 
-    animation: python 2s;
-}
-.r {
-    width: 90%; 
-    animation: r 2s;
-}
-.git {
-    width: 80%; 
-    animation: git 2s;
-}
-.sql {
-    width: 60%; 
-    animation: sql 2s;
-}
-
-@keyframes python {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%
-    }
-}
-@keyframes r {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 90%
-    }
-}
-@keyframes git {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 80%
-    }
-}
-@keyframes sql {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 60%
+@media (min-width: 600px) {
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* footer */
 
 .footer {
-    background: var(--clr-back);
+    background: var(--clr-light);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
-
 }
 
 .footer a { 
